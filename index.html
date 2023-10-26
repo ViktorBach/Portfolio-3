@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<h1>Whack-A-Mole <span class="score">0</span></h1>
+<div class="buttons">
+    <button class="start-button" onClick="startGame()">Play!</button>
+    <button class="rules-button">Show Rules</button>
+<div class="difficulty-container">
+    <label for="difficulty">Difficulty:</label>
+    <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+    </select>
+</div>
+
+</div>
+<div id="rules-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Rules of the Game</h2>
+        <p>Click the moles as they pop up from the mounds. Each successful hit earns you a point.</p>
+    </div>
+</div>
+<div class="game">
+    <div class="hole hole1">
+        <div class="mole"></div>
+    </div>
+    <div class="hole hole2">
+        <div class="mole"></div>
+    </div>
+    <div class="hole hole3">
+        <div class="mole"></div>
+    </div>
+    <div class="hole hole4">
+        <div class="mole"></div>
+    </div>
+    <div class="hole hole5">
+        <div class="mole"></div>
+    </div>
+    <div class="hole hole6">
+        <div class="mole"></div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

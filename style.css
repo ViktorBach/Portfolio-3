@@ -1,0 +1,142 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 100px;
+    line-height: 1;
+    margin-top: 45px;
+    font-family: cursive;
+}
+
+.score {
+    font-size: 100px;
+    padding: 1rem;
+    line-height: 1;
+    border-radius: 1rem;
+    display: inline-block;
+}
+
+.buttons {
+    text-align: center;
+}
+.start-button, .rules-button {
+    padding: 10px 25px;
+    margin-top: 100px;
+    outline: none;
+    font-size: 24px;
+    background: #c2185b;
+    color: #fff;
+    border: 0px;
+    border-radius: 0.5rem;
+    box-shadow: 1px 2px 4px #c2185bb0;
+    cursor: pointer;
+}
+
+.start-btn:hover {
+    background: #187bc2;
+    box-shadow: 1px 2px 4px #185fc2b0;
+}
+
+.game {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.hole {
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hole:after {
+    background: url("mole-hill.png") bottom center no-repeat;
+    background-size: contain;
+    content: "";
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+}
+
+.mole {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background: url("mole-head.png") bottom center no-repeat;
+    background-size: 60%;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.hole.up .mole {
+    top: 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #f2f2f2;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        padding: 20px;
+        font-size: 2rem;
+    }
+
+    .score {
+        margin: 20px;
+    }
+
+    .hole::after {
+        bottom: -22px;
+        margin: 6px;
+    }
+
+    .start-btn {
+        padding: 8px 20px;
+    }
+
+    .levels > div {
+        margin: 10px;
+    }
+
+    .game {
+        width: 90%;
+        height: 300px;
+    }
+}
