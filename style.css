@@ -1,7 +1,8 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    background-color: whitesmoke;
 }
 
 h1 {
@@ -28,18 +29,24 @@ h1 {
     margin-top: 100px;
     outline: none;
     font-size: 24px;
-    background: #c2185b;
-    color: #fff;
-    border: 0px;
+    background: palevioletred;
+    color: white;
+    border: 0;
     border-radius: 0.5rem;
-    box-shadow: 1px 2px 4px #c2185bb0;
+    box-shadow: 1px 2px 4px darkred;
     cursor: pointer;
 }
 
-.start-btn:hover {
-    background: #187bc2;
-    box-shadow: 1px 2px 4px #185fc2b0;
+.start-button:hover, .rules-button:hover {
+    background-color: darkslategray;
+    box-shadow: 1px 2px 4px darkblue;
 }
+
+.difficulty-container {
+    font-size: 30px;
+    margin-top: 1rem;
+}
+
 
 .game {
     width: 600px;
@@ -95,17 +102,17 @@ h1 {
 }
 
 .modal-content {
-    background-color: #f2f2f2;
+    background-color: whitesmoke;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid grey;
     width: 80%;
     max-width: 400px;
     position: relative;
 }
 
 .close {
-    color: #aaa;
+    color: darkgrey;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -115,11 +122,12 @@ h1 {
 @media (max-width: 768px) {
     h1 {
         padding: 20px;
-        font-size: 2rem;
+        font-size: 50px;
     }
 
     .score {
         margin: 20px;
+        font-size: 50px;
     }
 
     .hole::after {
@@ -127,7 +135,7 @@ h1 {
         margin: 6px;
     }
 
-    .start-btn {
+    .buttons {
         padding: 8px 20px;
     }
 
